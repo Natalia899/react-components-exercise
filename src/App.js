@@ -8,6 +8,15 @@ import Menu from './components/Menu';
 
 // Spot Check 1
 export class Sum extends Component {
+ 
+  render(){
+   let num1 = 25
+    let num2 =3 
+   return (
+    <div>the sum is{num1+num2}</div>
+   )
+   
+  }
   // your code here...
 }
 
@@ -24,6 +33,11 @@ class Nav extends Component {
 }
 
 class LandingPage extends Component {
+  render(){
+    return(
+      <h1>welcome</h1>
+    )
+  }
   // your code here...
 }
 
@@ -40,8 +54,8 @@ class Profile extends Component {
 }
 
 // Spot Check 4
-export const Banner = function () {
-
+export const Banner = ()=> {
+    return (<div className="banner">THE LOGO</div>)
 }
 
 
@@ -64,6 +78,7 @@ export class Blurb extends Component {
 export class App extends Component {
 
   render() {
+
     let isUserLoggedIn = localStorage.getItem('loggedIn')
     let componentToDisplay = isUserLoggedIn ?
       <Profile /> :
@@ -76,6 +91,7 @@ export class App extends Component {
           <h4 className="ex-title">Spotcheck 2</h4>
           <div className="exercise" id="spotcheck-2">
             <Nav />
+            <LandingPage />
             {/* your code here... */}
           </div>
         </div>
@@ -90,7 +106,7 @@ export class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Spotcheck 4</h4>
           <div className="exercise" id="spotcheck-4">
-            {/* your code here... */}
+            <Banner/>
           </div>
         </div>
 
@@ -104,21 +120,23 @@ export class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Exercise 1</h4>
           <div className="exercise" id="ex-1">
-            {/* your code here... */}
+            <Dummy/>
           </div>
         </div>
 
         <div className="ex-space">
           <h4 className="ex-title">Exercise 2</h4>
           <div className="exercise" id="ex-2">
-            {/* your code here... */}
+            <Spamalot/>
           </div>
         </div>
 
         <div className="ex-space">
           <h4 className="ex-title">Exercise 4</h4>
           <div className="exercise" id="ex-4">
-            {/* your code here... */}
+            <NavBar/>
+            <Menu/>
+            <Checkout/>
           </div>
         </div>
       </div>
